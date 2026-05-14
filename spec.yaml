@@ -1,0 +1,12 @@
+schemaVersion: "1"
+kind: mixin
+name: sdd-workflow
+displayName: Spec-Driven Development Workflow
+description: Adds SDD workflow skills and role references for Codex inside Docker Sandboxes.
+
+environment:
+  variables:
+    SDD_WORKFLOW: "1"
+    SDD_SKILLS_DIR: /home/agent/.agents/skills
+    SDD_AGENTS_DIR: /home/agent/.agents/sdd-agents
+    SDD_NOTES: /home/agent/.sdd/README.md
