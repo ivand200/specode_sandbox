@@ -3,13 +3,13 @@
 Spec-Driven Development skills are installed at:
 
 ```text
-/home/agent/.agents/skills
+/home/agent/.codex/skills
 ```
 
-Role reference files are installed at:
+Subagent definition files are installed at:
 
 ```text
-/home/agent/.agents/sdd-agents
+/home/agent/.codex/agents
 ```
 
 Use `manager` first for implementation requests. It chooses the smallest safe path, writes workflow state under `tasks/<task-name>/`, and stops at approval gates.

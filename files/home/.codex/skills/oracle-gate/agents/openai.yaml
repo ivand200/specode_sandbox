@@ -1,0 +1,4 @@
+interface:
+  display_name: "Oracle Gate"
+  short_description: "Plan proof from an approved task and design."
+  default_prompt: "Use $oracle-gate after design-doc to map approved claims to behavior, contract, regression, and manual proof before breakdown or implementation."

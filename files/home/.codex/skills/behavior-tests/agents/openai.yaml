@@ -1,0 +1,4 @@
+interface:
+  display_name: "Behavior Tests"
+  short_description: "BDD tests for business logic and module contracts."
+  default_prompt: "Use $behavior-tests to add or review black-box behavior tests for business logic and module interfaces with fixture-based AAA."

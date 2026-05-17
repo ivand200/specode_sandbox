@@ -159,7 +159,7 @@ sbx exec -it <sandbox-name> bash
 Verify that the SDD kit landed inside the sandbox:
 
 ```sh
-sbx exec <sandbox-name> sh -lc 'test -f /home/agent/.codex/AGENTS.md && test -f /home/agent/.agents/skills/manager/SKILL.md && echo ok'
+sbx exec <sandbox-name> sh -lc 'test -f /home/agent/.codex/AGENTS.md && test -f /home/agent/.codex/skills/manager/SKILL.md && test -f /home/agent/.codex/agents/developer.toml && echo ok'
 ```
 
 Inspect network policy decisions:
@@ -185,8 +185,8 @@ Note: `--kit` only applies when a sandbox is created. To apply a changed kit to 
 
 The copied files install:
 
-- SDD skills under `/home/agent/.agents/skills`
-- role reference TOMLs under `/home/agent/.agents/sdd-agents`
+- SDD skills under `/home/agent/.codex/skills`
+- SDD subagent TOMLs under `/home/agent/.codex/agents`
 - Codex global guidance under `/home/agent/.codex/AGENTS.md`
 - a short sandbox note under `/home/agent/.sdd/README.md`
 

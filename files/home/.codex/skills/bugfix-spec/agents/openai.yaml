@@ -1,0 +1,4 @@
+interface:
+  display_name: "Bugfix Spec"
+  short_description: "Capture defects, reproduction, scope, and regression risk."
+  default_prompt: "Use $bugfix-spec to shape this defect into a concise bugfix spec with current behavior, expected behavior, unchanged behavior, and validation."

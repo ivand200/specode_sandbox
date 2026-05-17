@@ -1,0 +1,4 @@
+interface:
+  display_name: "Breakdown"
+  short_description: "Break design docs into tasks with validation and review scope."
+  default_prompt: "Use $breakdown to convert a task, context, and design document into an actionable implementation checklist with validation and skip/full review scope."

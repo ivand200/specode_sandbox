@@ -1,0 +1,4 @@
+interface:
+  display_name: "Design Doc"
+  short_description: "Create design docs with interfaces, tradeoffs, and review scope."
+  default_prompt: "Use $design-doc to produce a high-level implementation design document from my task and context files, including module/entity impact and skip/full review scope."

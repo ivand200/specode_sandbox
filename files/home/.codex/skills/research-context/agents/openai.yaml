@@ -1,0 +1,4 @@
+interface:
+  display_name: "Research Context"
+  short_description: "Investigate codebase context, module boundaries, and risk."
+  default_prompt: "Use $research-context to investigate this task and produce an evidence-based context report when the user asked for investigation or the task is too risky or unclear for safe design, including module boundaries and contract-test gaps."

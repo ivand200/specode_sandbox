@@ -1,0 +1,4 @@
+interface:
+  display_name: "Architecture Principles"
+  short_description: "Guide design with simplicity, cohesion, and module interfaces."
+  default_prompt: "Use $architecture-principles to review or shape this design with lightweight architecture principles such as DRY, KISS, YAGNI, low coupling, high cohesion, and explicit module interfaces."

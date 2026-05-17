@@ -2,7 +2,9 @@
 
 This Docker Sandbox includes a Spec-Driven Development workflow pack.
 
-Use installed skills from `/home/agent/.agents/skills` when their descriptions match the user's request. The main workflow skills are:
+Use installed skills from `/home/agent/.codex/skills` when their descriptions match the user's request.
+
+The main workflow skills are:
 
 - `manager`: choose the smallest safe workflow path, persist `tasks/<task-name>/state.json`, run one step, then stop for approval.
 - `task-requirements`: create feature `tasks/<task-name>/task.md`.
@@ -11,8 +13,14 @@ Use installed skills from `/home/agent/.agents/skills` when their descriptions m
 - `breakdown`: create `tasks/<task-name>/tasks.md` only when an accepted design needs explicit implementation slices.
 - `behavior-tests`: write or review tests through stable behavior or public contract boundaries.
 - `verification-report`: summarize final proof in `tasks/<task-name>/verification-report.md`.
+- `project-specs`: create or refresh durable project steering docs.
+- `make-diagram`: create high-level Mermaid module/interface diagrams.
+- `module-interface-sketch`: create sketch-style PNG module/interface diagrams.
+- `grill-me`: stress-test important product, architecture, interface, or proof questions one by one.
 
-Reference role definitions are available at `/home/agent/.agents/sdd-agents`.
+Shared terminology lives at `/home/agent/.codex/skills/glossary/LANGUAGE.md`.
+
+Subagent definitions are available at `/home/agent/.codex/agents`.
 
 Workflow rules:
 

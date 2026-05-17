@@ -7,6 +7,6 @@ description: Adds SDD workflow skills and role references for Codex inside Docke
 environment:
   variables:
     SDD_WORKFLOW: "1"
-    SDD_SKILLS_DIR: /home/agent/.agents/skills
-    SDD_AGENTS_DIR: /home/agent/.agents/sdd-agents
+    SDD_SKILLS_DIR: /home/agent/.codex/skills
+    SDD_AGENTS_DIR: /home/agent/.codex/agents
     SDD_NOTES: /home/agent/.sdd/README.md

@@ -1,0 +1,4 @@
+interface:
+  display_name: "Project Specs"
+  short_description: "Create or refresh tiny steering docs and module maps."
+  default_prompt: "Use $project-specs to create or update lightweight project-level specs for this repository, including durable module interface maps when useful."

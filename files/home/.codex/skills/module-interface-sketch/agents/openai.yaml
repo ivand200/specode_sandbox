@@ -1,0 +1,4 @@
+interface:
+  display_name: "Module Interface Sketch"
+  short_description: "Sketch module maps from interfaces."
+  default_prompt: "Use $module-interface-sketch to create a minimal bright sketch-style PNG diagram from this project's module interface map."

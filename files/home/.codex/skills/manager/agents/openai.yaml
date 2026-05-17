@@ -1,0 +1,4 @@
+interface:
+  display_name: "Manager"
+  short_description: "Run one scale-based workflow step, then stop for approval."
+  default_prompt: "Use $manager to route this task by low, medium, or large scale, run one workflow step, update state, and stop for engineer approval."

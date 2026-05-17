@@ -1,0 +1,4 @@
+interface:
+  display_name: "Task Requirements"
+  short_description: "Shape task scope, acceptance criteria, and risk."
+  default_prompt: "Use $task-requirements to turn this request into a compact task artifact with acceptance criteria, interface impact, and review-risk hints."
