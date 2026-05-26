@@ -17,6 +17,15 @@ Write tests around observable business behavior, contracts, and module interface
 
 Use Arrange-Act-Assert:
 
+- Start every new or rewritten test with a short BDD docstring/comment in this exact shape:
+
+  ```text
+  GIVEN: ...
+  WHEN: ...
+  THEN: ...
+  ```
+
+  In Python tests, prefer a triple-quoted docstring immediately inside the test function. In languages where test docstrings are not idiomatic, use a compact block comment at the top of the test body.
 - Arrange: move setup into fixtures/helpers/builders.
 - Act: exactly one meaningful business action.
 - Assert: 1-2 assertions about the business outcome, returned value, contract status, domain effect, error, or preserved invariant.

@@ -1,38 +1,30 @@
 ---
 name: verification-report
-description: Create a compact human-readable verification report after implementation, testing, and review, highlighting the most important tests, E2E checks, manual checks, and residual risks an engineer should inspect before accepting AI-generated work.
+description: Create a tiny human acceptance brief for completed agent work, mapping key claims to proof and naming the QA/code-review checks worth doing before acceptance.
 ---
 
 # Verification Report
 
 Create or refresh `tasks/<task-name>/verification-report.md`.
 
-Use after implementation, testing, required review, and accepted reviewer fixes. Do not edit code, tests, task artifacts, or workflow state.
+This is not a code review, test inventory, or change summary. It is a QA/code-review plan for the engineer: what is proven, what is weak, and where human attention should go.
 
-## Inputs
+## Rules
 
-Read all available task artifacts in `tasks/<task-name>/`:
-
-- `state.json`
-- `task.md`
-- `design.md`
-- `tasks.md`
-- developer/tester/reviewer returns when present
-- changed files, test output, CI logs, screenshots, or E2E artifacts when available
-
-## Core Rules
-
-- Specification artifacts are the source of truth; code and tests are evidence.
-- Report only the highest-value proof, not every test.
-- Call out weak proof, missing proof, skipped proof, and residual risk plainly.
+- Do not edit code, tests, workflow state, or accepted artifacts.
+- Do not review every line or summarize every artifact.
+- Start from `Oracle Gate`; use task/design only when needed.
+- Prefer risk-carrying seams over file lists.
+- Report only proof and checks that change acceptance confidence.
+- If proof is weak, missing, stale, or only claimed by an agent, say so.
 
 ## Workflow
 
-1. Map accepted claims from task and design, especially `Oracle Gate`, to actual evidence.
-2. Select the 1-3 most critical automated tests for this task.
-3. Select the 1-2 most relevant E2E/workflow tests when present.
-4. Write what the engineer should inspect, manually verify, or distrust.
-5. Decide verdict: `ready_for_engineer_check`, `warn`, or `blocked`.
+1. Pick the 1-3 claims that decide acceptance.
+2. Map each claim to the strongest evidence.
+3. Pick the 1-3 human QA/code-review checks that matter.
+4. Name residual risk.
+5. Give a verdict: `ready`, `inspect`, or `blocked`.
 
 ## Output
 
@@ -40,45 +32,23 @@ Read all available task artifacts in `tasks/<task-name>/`:
 # Verification Report: [Task Name]
 
 ## Verdict
-- `ready_for_engineer_check | warn | blocked`
+- `ready | inspect | blocked`
 
-## Spec Claims Covered
+## Evidence
 
-| Claim | Source | Evidence | Status |
-| --- | --- | --- | --- |
-| `AC-1` | `task.md` | `tests/test_x.py::test_name` | passed |
+| Claim | Evidence | Status |
+| --- | --- | --- |
+| ... | ... | `passed | weak | missing | failed` |
 
-## Most Important Tests To Inspect
+## Human QA Plan
 
-1. `tests/...::test_name`
-   - Proves: ...
-   - Why inspect: ...
-   - What to check: ...
-
-## Most Important E2E Tests
-
-1. `e2e/...spec.ts`
-   - Proves: ...
-   - Scenario: ...
-   - What to check manually: ...
-
-## Engineer Verification Checklist
-
-- Check that ...
-- Check that ...
-- Check that ...
+- Check ...
+- Try ...
+- Inspect ...
 
 ## Residual Risk
 
 - ...
 ```
 
-## Quality Bar
-
-A good report lets an engineer quickly see:
-
-- which spec claims are covered
-- which tests are worth reading closely
-- which E2E checks matter
-- what still needs human verification
-- what risk remains
+Keep it short. If this needs a long report, the task needed a stronger oracle, smaller slices, or targeted review.

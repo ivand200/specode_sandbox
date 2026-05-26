@@ -192,6 +192,40 @@ The copied files install:
 
 This kit deliberately uses `/home/agent/.codex/AGENTS.md` instead of the Docker kit `memory` field. Docker applies `memory` only when an agent kit has `agent.aiFilename`; for this mixin we want explicit Codex behavior through `CODEX_HOME`.
 
+## Packaged Workflow Content
+
+The maintainer source of truth for packaged workflow content is the local global Codex home:
+
+- `$CODEX_HOME/skills`
+- `$CODEX_HOME/agents`
+
+Keep `files/home/.codex/skills` and `files/home/.codex/agents` synced from those global paths. Do not package system/private skills unless the project intentionally decides to ship them.
+
+Packaged skills:
+
+- `architecture-principles`
+- `behavior-tests`
+- `breakdown`
+- `bugfix-spec`
+- `design-doc`
+- `glossary`
+- `grill-me`
+- `make-diagram`
+- `manager`
+- `module-interface-sketch`
+- `oracle-gate`
+- `orient`
+- `project-specs`
+- `research-context`
+- `task-requirements`
+- `verification-report`
+
+Packaged role adapters:
+
+- `developer.toml`
+- `reviewer.toml`
+- `tester.toml`
+
 ## Branch Mode
 
 Branch mode is optional for this kit.
